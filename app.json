@@ -1,5 +1,6 @@
 {
-   "name": "astrix",
+   "name": "Astrix",
+
    "env": {
       "SECRET_KEY": {
          "description": "SECRET_KEY.",
@@ -18,6 +19,9 @@
          "url": "heroku/python"
       }
    ],
+   "engines": {
+     "node": "10.x"
+   },
    "addons": [
       {
          "plan": "heroku-postgresql:hobby-dev",
