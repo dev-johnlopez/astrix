@@ -44,6 +44,7 @@ docs/_build
 
 # Virtualenvs
 env/
+flask/
 
 # npm
 /node_modules/
