@@ -5,7 +5,7 @@ import sys
 
 from flask import Flask, render_template
 
-from astrix import commands, public, user
+from app import commands, public, user
 from app.extensions import (
     bcrypt,
     cache,
