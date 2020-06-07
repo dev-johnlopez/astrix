@@ -11,11 +11,11 @@ from flask import (
 )
 from flask_login import login_required, login_user, logout_user
 
-from astrix.extensions import login_manager
-from astrix.public.forms import LoginForm
-from astrix.user.forms import RegisterForm
-from astrix.user.models import User
-from astrix.utils import flash_errors
+from app.extensions import login_manager
+from app.public.forms import LoginForm
+from app.user.forms import RegisterForm
+from app.user.models import User
+from app.utils import flash_errors
 
 blueprint = Blueprint("public", __name__, static_folder="../static")
 

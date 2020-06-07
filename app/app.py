@@ -6,7 +6,7 @@ import sys
 from flask import Flask, render_template
 
 from astrix import commands, public, user
-from astrix.extensions import (
+from app.extensions import (
     bcrypt,
     cache,
     csrf_protect,
@@ -18,7 +18,7 @@ from astrix.extensions import (
 )
 
 
-def create_app(config_object="astrix.settings"):
+def create_app(config_object="app.settings"):
     """Create application factory, as explained here: http://flask.pocoo.org/docs/patterns/appfactories/.
 
     :param config_object: The configuration object to use.

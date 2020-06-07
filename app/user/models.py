@@ -4,7 +4,7 @@ import datetime as dt
 
 from flask_login import UserMixin
 
-from astrix.database import (
+from app.database import (
     Column,
     Model,
     SurrogatePK,
@@ -12,7 +12,7 @@ from astrix.database import (
     reference_col,
     relationship,
 )
-from astrix.extensions import bcrypt
+from app.extensions import bcrypt
 
 
 class Role(SurrogatePK, Model):
