@@ -51,6 +51,7 @@ flask/
 
 # webpack-built files
 /astrix/static/build/
+/astrix/static/cache_manifest.json
 
 # Configuration
 .env
