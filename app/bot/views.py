@@ -7,10 +7,15 @@ from .util import detect_intent_texts
 
 blueprint = Blueprint('bot', __name__, url_prefix='/bot')
 
-logging.getLogger('flask_assistant').setLevel(logging.DEBUG)
+#logging.getLogger('flask_assistant').setLevel(logging.DEBUG)
 
 @blueprint.route('/twilio', methods=['POST'])
 def twilio():
+    print("=======")
+    print("=======")
+    print("=======")
+    print("=======")
+    print("=======")
     incoming_msg = request.values.get('Body', '').lower()
     print("=======")
     print(str(request.values))
