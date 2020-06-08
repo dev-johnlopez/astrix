@@ -1,35 +1,259 @@
 
 {% extends "layout.html" %}
 {% block content %}
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
-    <div class="container">
-    
-      <h1 class="display-3">Welcome to Astrix</h1>
-    
-      <p>This is a starter Flask template. It includes Bootstrap 4, jQuery 3, Flask-SQLAlchemy, WTForms, and various testing utilities out of the box.</p>
-      <p><a href="https://github.com/cookiecutter-flask/cookiecutter-flask" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-    </div>
-</div><!-- /.jumbotron -->
+<!-- Hero Section -->
+<div class="position-relative bg-img-hero" style="background-image: url({{ url_for('static', filename='svg/components/abstract-shapes-12.svg') }});">
+  <div class="container space-top-3 space-bottom-lg-3">
+    <div class="row justify-content-lg-between align-items-lg-center pt-lg-5">
+      <div class="col-lg-5">
+        <!-- Info -->
+        <div class="mb-5">
+          <h1 class="display-4 mb-3">The ad that manages itself</h1>
+          <p class="lead">Automate all your ad management strategies for Facebook, Google and Snapchat Ads in a single interface.</p>
+        </div>
+        <!-- End Info -->
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-4">
-      <h2><i class="fa fa-code"></i> Bootstrap 4</h2>
-      <p>Sleek, intuitive, and powerful mobile-first front-end framework for faster and easier web development.</p>
-      <p><a class="btn btn-outline-secondary" href="http://getbootstrap.com/">Official website &raquo;</a></p>
+        <!-- Form -->
+        <form class="js-validate mb-7">
+          <div class="form-row">
+            <div class="col-sm col-md-6 col-lg mb-2">
+              <div class="js-form-message">
+                <label class="sr-only" for="signupSrEmail">Your email</label>
+                <div class="input-group">
+                  <input type="email" class="form-control" name="email" id="signupSrEmail" placeholder="Your email" aria-label="Your email" required
+                         data-msg="Please enter a valid email address.">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-auto">
+              <button type="submit" class="btn btn-primary btn-block">Request Demo</button>
+            </div>
+          </div>
+        </form>
+        <!-- End Form -->
+
+        <span class="d-block small font-weight-bold text-cap mb-2">Astrix partners:</span>
+
+        <!-- Clients -->
+        <div class="row">
+          <div class="col-4 col-sm-3 my-2">
+            <img class="max-w-11rem max-w-md-13rem mx-auto" src="{{ url_for('static', filename='svg/clients-logo/airbnb.svg') }}" alt="Image Description">
+          </div>
+          <div class="col-4 col-sm-3 my-2">
+            <img class="max-w-11rem max-w-md-13rem mx-auto" src="{{ url_for('static', filename='svg/clients-logo/fitbit.svg') }}" alt="Image Description">
+          </div>
+          <div class="col-4 col-sm-3 my-2">
+            <img class="max-w-11rem max-w-md-13rem mx-auto" src="{{ url_for('static', filename='svg/clients-logo/weebly.svg') }}" alt="Image Description">
+          </div>
+        </div>
+        <!-- End Clients -->
+      </div>
     </div>
-    <div class="col-lg-4">
-      <h2><i class="fa fa-flask"></i> SQLAlchemy</h2>
-      <p>SQLAlchemy is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL.</p>
-      <p><a href="http://www.sqlalchemy.org/" class="btn btn-outline-secondary">Official website &raquo;</a></p>
-   </div>
-    <div class="col-lg-4">
-      <h2><i class="fa fa-edit"></i> WTForms</h2>
-      <p>WTForms is a flexible forms validation and rendering library for python web development.</p>
-      <p><a href="http://wtforms.simplecodes.com/" class="btn btn-outline-secondary">Official website &raquo;</a></p>
-    </div>
-  </div><!-- /.row -->
+  </div>
+
+
 </div>
-{% endblock %}
+<!-- End Hero Section -->
 
+<!-- Icon Blocks Section -->
+<div class="container space-2">
+  <!-- Title -->
+  <div class="w-lg-65 text-center mx-auto mb-5 mb-sm-9">
+    <h2 class="h1">What we do?</h2>
+    <p>A flexible theme for modern SaaS businesses</p>
+  </div>
+  <!-- End Title -->
+
+  <div class="row">
+    <div class="col-md-4 mb-7">
+      <!-- Icon Blocks -->
+      <div class="text-center px-lg-3">
+        <figure class="max-w-8rem mx-auto mb-4">
+          <img class="img-fluid" src="{{ url_for('static', filename='svg/icons/icon-18.svg') }}" alt="SVG">
+        </figure>
+        <h3>Human-like conversations</h3>
+        <p>Your chatbot will achieve human-like conversations with your clients which builds the best customer experience possible.</p>
+      </div>
+      <!-- End Icon Blocks -->
+    </div>
+
+    <div class="col-md-4 mb-7">
+      <!-- Icon Blocks -->
+      <div class="text-center px-lg-3">
+        <figure class="max-w-8rem mx-auto mb-4">
+          <img class="img-fluid" src="{{ url_for('static', filename='svg/icons/icon-14.svg') }}" alt="SVG">
+        </figure>
+        <h3>Be strategic with your time</h3>
+        <p>With a chatbot you will spend less time dealing with your inbound leads and more time focusing on closing your existing clients.</p>
+      </div>
+      <!-- End Icon Blocks -->
+    </div>
+
+    <div class="col-md-4 mb-7">
+      <!-- Icon Blocks -->
+      <div class="text-center px-lg-3">
+        <figure class="max-w-8rem mx-auto mb-4">
+          <img class="img-fluid" src="{{ url_for('static', filename='svg/icons/icon-23.svg') }}" alt="SVG">
+        </figure>
+        <h3>Accelerate your business</h3>
+        <p>Your automated real estate chatbot is available 24/7 to resond to your loads. All leads are seamlessly integrated into your CRM.</p>
+      </div>
+      <!-- End Icon Blocks -->
+    </div>
+  </div>
+
+  <img class="img-fluid d-none d-md-block w-75 mx-auto mb-7" src="{{ url_for('static', filename='svg/components/three-pointers.svg') }}" alt="SVG Arrow">
+
+  <!-- CTA Section -->
+  <div class="container">
+    <div class="w-lg-85 mx-lg-auto">
+      <div class="card bg-primary text-white overflow-hidden p-4">
+        <div class="row justify-content-md-start align-items-md-center text-center text-md-left">
+          <div class="col-md-6 offset-md-3 mb-3 mb-md-0">
+            <h3 class="text-white mb-1">Want to get started?</h3>
+            <p class="text-white-70 mb-0">We'd love to talk about how we can help you.</p>
+          </div>
+          <div class="col-md-3 text-md-right">
+            <a class="btn btn-light transition-3d-hover" href="#">Schedule a demo.</a>
+          </div>
+        </div>
+
+        <!-- SVG Component -->
+        <figure class="w-25 d-none d-md-block content-centered-y ml-n4">
+          <img class="img-fluid" src="{{ url_for('static', filename='svg/illustrations/communication.svg') }}" alt="Image Description">
+        </figure>
+        <!-- End SVG Component -->
+      </div>
+    </div>
+  </div>
+  <!-- End CTA Section -->
+
+</div>
+<!-- End Icon Blocks Section -->
+
+<!-- Step Section -->
+<div class="overflow-hidden">
+  <div class="container space-2">
+    <div class="row justify-content-lg-between align-items-lg-center">
+      <div class="col-lg-6 mb-9 mb-lg-0">
+        <!-- Mockups -->
+        <div class="position-relative max-w-40rem mx-auto">
+          <div class="device device-iphone-x w-85 mx-auto">
+            <img class="device-iphone-x-frame" src="{{ url_for('static', filename='svg/components/iphone-x.svg') }}" alt="Image Description">
+            <img class="device-iphone-x-screen" src="{{ url_for('static', filename='img/407x867/img1.jpg') }}" alt="Image Description">
+          </div>
+
+          <div class="position-absolute top-0 right-0 z-index-2 max-w-33rem mr-n11 mt-9">
+            <img class="img-fluid shadow-lg rounded" src="{{ url_for('static', filename='img/407x115/img1.jpg') }}" alt="Image Description">
+          </div>
+          <div class="position-absolute bottom-0 left-0 z-index-2 max-w-33rem ml-n10 mb-10">
+            <img class="img-fluid shadow-lg rounded" src="{{ url_for('static', filename='img/480x320/img26.jpg') }}" alt="Image Description">
+          </div>
+
+          <div class="position-absolute bottom-0 right-0 max-w-50rem w-100 z-index-n1 mx-auto">
+            <img class="img-fluid" src="{{ url_for('static', filename='svg/components/abstract-shapes-3.svg') }}" alt="Image Description">
+          </div>
+        </div>
+        <!-- End Mockups -->
+      </div>
+
+      <div class="col-lg-5">
+        <div class="mb-5">
+          <h2>A chatbot designed for busy agents</h2>
+        </div>
+
+        <!-- Collapse Section -->
+        <div class="container space-2">
+          <!-- Basics Accordion -->
+          <div id="basicsAccordion">
+            <!-- Card -->
+            <div class="card shadow-none mb-3">
+              <div class="card-header card-collapse" id="basicsHeadingOne">
+                <a class="btn btn-link btn-block d-flex justify-content-between card-btn collapsed bg-white px-0" href="javascript:;" role="button" data-toggle="collapse" data-target="#basicsCollapseOne" aria-expanded="false" aria-controls="basicsCollapseOne">
+                  What is a real estate chatbot?
+
+                  <span class="card-btn-toggle">
+                    <span class="card-btn-toggle-default">+</span>
+                    <span class="card-btn-toggle-active">−</span>
+                  </span>
+                </a>
+              </div>
+              <div id="basicsCollapseOne" class="collapse" aria-labelledby="basicsHeadingOne" data-parent="#basicsAccordion">
+                <div class="card-body px-0">
+                  <p>A real estate chatbot is computer program which automatically responds to your leads. Our chatbot an answer common questions, collect lead information, and even schedule your appointments!</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Card -->
+
+            <!-- Card -->
+            <div class="card shadow-none mb-3">
+              <div class="card-header card-collapse" id="basicsHeadingTwo">
+                <a class="btn btn-link btn-block d-flex justify-content-between card-btn collapsed bg-white px-0" href="javascript:;" role="button" data-toggle="collapse" data-target="#basicsCollapseTwo" aria-expanded="false" aria-controls="basicsCollapseTwo">
+                  Why do I need a chatbot?
+
+                  <span class="card-btn-toggle">
+                    <span class="card-btn-toggle-default">+</span>
+                    <span class="card-btn-toggle-active">−</span>
+                  </span>
+                </a>
+              </div>
+              <div id="basicsCollapseTwo" class="collapse" aria-labelledby="basicsHeadingTwo" data-parent="#basicsAccordion">
+                <div class="card-body px-0">
+                  <p>Have you noticed how impatient people can be when you don't respond? Have you ever lost a client because you didnt respond fast enough? Well, a chatbot lets you respond to your leads instantaneously with any information they need. Think of your chatbot as your own virtual assistant who is reliable 24/7.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Card -->
+
+            <!-- Card -->
+            <div class="card shadow-none mb-3">
+              <div class="card-header card-collapse" id="basicsHeadingThree">
+                <a class="btn btn-link btn-block d-flex justify-content-between card-btn collapsed bg-white px-0" href="javascript:;" role="button" data-toggle="collapse" data-target="#basicsCollapseThree" aria-expanded="false" aria-controls="basicsCollapseThree">
+                  Where can I deploy my chatbot?
+
+                  <span class="card-btn-toggle">
+                    <span class="card-btn-toggle-default">+</span>
+                    <span class="card-btn-toggle-active">−</span>
+                  </span>
+                </a>
+              </div>
+              <div id="basicsCollapseThree" class="collapse" aria-labelledby="basicsHeadingThree" data-parent="#basicsAccordion">
+                <div class="card-body px-0">
+                  <p>Our chatbots can be deployed to the following channels: Facebook, Facebook Messenger, SMS, and voice. We recommend beginning with Facebook Messenger because Facebook has over one billion active users with the largest engagement rates.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Card -->
+
+            <!-- Card -->
+            <div class="card shadow-none mb-3">
+              <div class="card-header card-collapse" id="basicsHeadingFour">
+                <a class="btn btn-link btn-block d-flex justify-content-between card-btn collapsed bg-white px-0" href="javascript:;" role="button" data-toggle="collapse" data-target="#basicsCollapseFour" aria-expanded="false" aria-controls="basicsCollapseFour">
+                  Can my chatbot answer questions and schedule appointments?
+
+                  <span class="card-btn-toggle">
+                    <span class="card-btn-toggle-default">+</span>
+                    <span class="card-btn-toggle-active">−</span>
+                  </span>
+                </a>
+              </div>
+              <div id="basicsCollapseFour" class="collapse" aria-labelledby="basicsHeadingFour" data-parent="#basicsAccordion">
+                <div class="card-body px-0">
+                  <p>It can do both of that and more. Our chatbots are powered by Artificial Intelligence (AI) and will learn the proper way to respond to your clients inquiries. The chatbot will also integrate with your internal systems which futher saves you time.</p>
+
+                </div>
+              </div>
+            </div>
+            <!-- End Card -->
+          </div>
+          <!-- End Basics Accordion -->
+        </div>
+        <!-- End Collapse Section -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Steps Section -->
+{% endblock %}

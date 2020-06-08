@@ -34,7 +34,7 @@ module.exports = {
     chunkFilename: "[id].js",
     filename: "[name].bundle.js",
     path: path.join(__dirname, "app", "static", "build"),
-    publicPath: "/static/build/"
+    publicPath: "/static2/build/"
   },
   resolve: {
     extensions: [".js", ".jsx", ".css"]
