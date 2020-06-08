@@ -11,22 +11,28 @@ blueprint = Blueprint('bot', __name__, url_prefix='/bot')
 
 @blueprint.route('/twilio', methods=['POST'])
 def twilio():
-    print("=======")
-    print("=======")
-    print("=======")
-    print("=======")
-    print("=======")
-    incoming_msg = request.values.get('Body', '').lower()
-    print("=======")
-    print(str(request.values))
-    print("=======")
-    resp = MessagingResponse()
-    msg = resp.message()
-    responded = False
-    intent = detect_intent_texts(project_id="autumn-wkhetw",
-                                   session_id="123",
-                                   texts=[incoming_msg],
-                                   language_code="en-US")
-    msg.body(intent.query_result.fulfillment_text)
-    responded = True
+    number = request.form['From']
+    message_body = request.form['Body']
+
+    resp = twiml.Response()
+    resp.message('Hello {}, you said: {}'.format(number, message_body))
     return str(resp)
+    #print("=======")
+    #print("=======")
+    #print("=======")
+    #print("=======")
+    #print("=======")
+    #incoming_msg = request.values.get('Body', '').lower()
+    #print("=======")
+    #print(str(request.values))
+    #print("=======")
+    #resp = MessagingResponse()
+    #msg = resp.message()
+    #responded = False
+    #intent = detect_intent_texts(project_id="autumn-wkhetw",
+    #                               session_id="123",
+    #                               texts=[incoming_msg],
+    #                               language_code="en-US")
+    #msg.body(intent.query_result.fulfillment_text)
+    #responded = True
+    #return str(resp)
