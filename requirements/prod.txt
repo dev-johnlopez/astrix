@@ -41,3 +41,9 @@ environs==8.0.0
 
 # Twilio
 twilio==6.40.0
+
+# SSL
+cffi==1.14.0
+cryptography==2.9.2
+pycparser==2.20
+pyOpenSSL==19.1.0
