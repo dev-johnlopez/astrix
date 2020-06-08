@@ -12,11 +12,8 @@ blueprint = Blueprint('bot', __name__, url_prefix='/bot')
 
 @blueprint.route('/twilio', methods=['POST'])
 def twilio():
-    number = request.form['From']
-    message_body = request.form['Body']
-
     resp = twiml.Response()
-    resp.message('Hello {}, you said: {}'.format(number, message_body))
+    resp.message('Hello, you said: nothing')
     return str(resp)
     #print("=======")
     #print("=======")
