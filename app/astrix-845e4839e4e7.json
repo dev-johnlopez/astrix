@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "astrix",
+  "private_key_id": "845e4839e4e7200ff761a87970e26b09255e6ddf",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDXaPMIbvMTJ4Gn\numXI0fh+Vcce3h6m8mIA+WKvHpUx6Shzk6vIRXRzHTI2eNSUrEL0qEYg85Z7Frhd\n0/KuGDOalrOkW6LmjI26/0in/n/afYCxC19KTghk01tQbWfLDoeImYnGnqANq21O\nJsQxY/SnToP62wjJanWhx4lquhgYTb0acms5+zeG+7wVADVIaz+2wQIxY//6ExoA\n/V0xz8DR+wbzlMRV9RalLSnrTxAQk7Pw+jpqiUnVSgW21v+tfEy7lDOq/jSaO6uN\n4ra+pWL9YtrXzkYRGKRyU3/TqsBuzfSn8CG9K1X6u6cz6F7yul0MvxDduWdSc39e\n6I7yygslAgMBAAECggEATJGWHe/OQIdA+51ys70LLuEPvAWpcJ9kvcLn1Kay0sB1\nrAuYOsKRf5+nqxwtOEG5NR0hfHIJkexEEboWn9KjeTZLWcdm8ruQX6GBspFw4fnN\nhmEr+I4fRrOoWEDjbZbXD3PAORVGgEVov6hhActtehEbMc6s42ePs7dpPcIzcWN9\njFqI3IHkVsBQyqBJByNxSKw22eiedvjpIDwhyzIkb80yNTsNljsaUYD5vMDHNLup\nrUxilwCf1CkS1mnVPuyfppqnk8pJXD/W0aP9C0qJMv5VagfY8o27HFSuR1scUUi4\nXhuQAPTo7fH3wuSDrGltW3lvVaiS/KEkbbxpNkmRGwKBgQD2Ld8zm2WmTvD1CQIa\nzNiKnLkcTvdUy0nowvJt2/qbLQXYD5dpSqMh5jfMn4iEndA/VfkRNHU5JZovXefC\n3eR/MHyqy32fx3TX9aev3UsMv8RWEhntRyA3eOgI13gO85xOOatqe+hRom1n4PfI\nP00ofH7CkxtEucnmZQBDm76H3wKBgQDgANgEwVn4AVjPy4BYp7vTFabS/4Nq9emV\nAxrDvMIzO7IfBd3cyofsduBzAhvmDfSAYYITun8XYCc8SKbummU9lOm372ODXGz/\n64UrVuujBbHPr/4KfHSvTgGdeuZWjUa+CDN49OjRiEIj84ibkecckGV2au1WqqlV\nS3XaVHWdewKBgQCCtZZ2Q0M0i2Oa5v6MFkm/RzluE2t1RT7n7GJl/E/ShpQ8xQKC\nsFNvk1n7NpV4vIYuqspE3VKEVjfIgJamu8Qv2CHJWaRI6tFaPR+c2+WWTlfDz3ae\nqo4rhfHFiApB/gz2593g+ws+FPz8E9HcK+ge4AM58nufAPp3bxc1zoLahwKBgBpM\nPxAf2v4gulp627CM0KIxcopm8PjHsgqKeMPuDyaQpZK6z5cyN87tDeCyqK/Th5bi\n27CRPoZyBWkwZliwy531M5MiiZ5MZYeOEO5LoBJdgsiNMtfsUI6cK9hfK1eR8nIw\n6EoVBphC1PD/kFQjRuy1jxPd7cs08fhPiaB+NeitAoGABkz0oWg/6XjH6aSiYE6W\nwYkqppBYL35BrMDc9YDasYAgcRw0M2ms7fjsrj1/mmow+l61mrvh0Xo3qIeC1ZnP\nGZbifyj3FkEpjVf0E0nb1boJZCUVHaP3Ju8C1SRDi4SKfjXom4Q25fluZTnmcDjU\np6dRvyV5PS+o4d0sXOjmeX4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "flask-app@astrix.iam.gserviceaccount.com",
+  "client_id": "105887069992606245475",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/flask-app%40astrix.iam.gserviceaccount.com"
+}

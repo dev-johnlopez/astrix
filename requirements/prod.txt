@@ -42,6 +42,9 @@ environs==8.0.0
 # Twilio
 twilio==6.40.0
 
+# Dialogflow
+dialogflow==1.0.0
+
 # SSL
 cffi==1.14.0
 cryptography==2.9.2
