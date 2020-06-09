@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A chatbot dev agency.",
   "scripts": {
-    "flask-server": "flask run --host=0.0.0.0",
+    "flask-server": "flask run --host=0.0.0.0"
   },
   "repository": {
     "type": "git",
