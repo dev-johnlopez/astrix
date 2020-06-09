@@ -1,0 +1,4 @@
+# Tests
+tests/
+.git/
+__pycache__/
