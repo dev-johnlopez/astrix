@@ -50,6 +50,7 @@ def register_extensions(app):
 def register_blueprints(app):
     """Register Flask blueprints."""
     app.register_blueprint(public.views.blueprint)
+    csrf_protect.exempt(public.views.blueprint)
     app.register_blueprint(user.views.blueprint)
     app.register_blueprint(bot.views.blueprint)
     return None
