@@ -60,11 +60,14 @@ def register_errorhandlers(app):
 
     def render_error(error):
         """Render error template."""
+
         # If a HTTPException, pull the `code` attribute; default to 500
         error_code = getattr(error, "code", 500)
+        print(error_code)
+        print(getattr(error, "code", 500))
         return render_template(f"{error_code}.html"), error_code
 
-    for errcode in [401, 404, 500]:
+    for errcode in [400, 401, 404, 500]:
         app.errorhandler(errcode)(render_error)
     return None
 
