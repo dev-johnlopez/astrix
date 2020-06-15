@@ -12,10 +12,11 @@ from flask import (
 from flask_login import login_required, login_user, logout_user
 
 from app.extensions import login_manager
-from app.public.forms import LoginForm
+from app.public.forms import LoginForm, ContactForm
 from app.user.forms import RegisterForm
 from app.user.models import User
-from app.utils import flash_errors
+from app.utils import flash_errors, flash_success
+from app.emails import send_new_contact_form_email
 
 blueprint = Blueprint("public", __name__, static_folder="../static")
 
@@ -45,15 +46,19 @@ def home():
 @blueprint.route("/contact", methods=["GET", "POST"])
 def contact():
     """Home page."""
-    form = LoginForm(request.form)
-    current_app.logger.info("Hello from the home page!")
+    form = ContactForm()
+    current_app.logger.info("Hello from the contact page!")
     # Handle logging in
     if request.method == "POST":
+        current_app.logger.info("POSTING!")
         if form.validate_on_submit():
-            login_user(form.user)
-            flash("You are logged in.", "success")
-            redirect_url = request.args.get("next") or url_for("user.members")
-            return redirect(redirect_url)
+            current_app.logger.info("SUCCESS!")
+            current_app.logger.info("SUCCESS!")
+            current_app.logger.info("SUCCESS!")
+            current_app.logger.info("SUCCESS!")
+            current_app.logger.info("SUCCESS!")
+            send_new_contact_form_email(form)
+            flash_success("We received your message!")
         else:
             flash_errors(form)
     return render_template("public/contact.html", form=form)

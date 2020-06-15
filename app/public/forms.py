@@ -2,7 +2,7 @@
 """Public forms."""
 from flask_wtf import FlaskForm
 from wtforms import PasswordField, StringField
-from wtforms.validators import DataRequired
+from wtforms.validators import DataRequired, Optional
 
 from app.user.models import User
 
@@ -37,3 +37,11 @@ class LoginForm(FlaskForm):
             self.username.errors.append("User not activated")
             return False
         return True
+
+class ContactForm(FlaskForm):
+    """Login form."""
+
+    name = StringField("Your Name", validators=[DataRequired()])
+    email = StringField("Your email address", validators=[DataRequired()])
+    company_name = StringField("Your company name", validators=[Optional()])
+    project_description = StringField("Tell us about your project", validators=[Optional()])

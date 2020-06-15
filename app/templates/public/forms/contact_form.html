@@ -1,0 +1,18 @@
+{% from "_macros/vertical_form.html" import render_field_with_errors %}
+
+<form class="js-validate row justify-content-lg-center" method="POST">
+  {{ form.hidden_tag() }}
+  <div class="col-lg-8">
+    {{ render_field_with_errors(form.name, class="form-control", required=True) }}
+    {{ render_field_with_errors(form.email, class="form-control", required=True) }}
+    {{ render_field_with_errors(form.company_name, class="form-control") }}
+    {{ render_field_with_errors(form.project_description, class="form-control", required=True) }}
+
+    <div class="text-center">
+      <div class="mb-2">
+        <button type="submit" class="btn btn-primary">Let's Start Working Together</button>
+      </div>
+      <p class="small">We'll get back to you in 1-2 business days.</p>
+    </div>
+  </div>
+</form>

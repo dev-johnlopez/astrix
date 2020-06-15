@@ -1,0 +1,6 @@
+New contact form submission.
+
+Name: {{ form.name.data }}
+Email: {{ form.email.data }}
+Company: {{ form.company_name.data }}
+Description: {{ form.project_description.data }}

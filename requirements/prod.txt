@@ -15,6 +15,9 @@ psycopg2-binary==2.8.5
 # Migrations
 Flask-Migrate==2.5.3
 
+# Flask Mail
+Flask-Mail==0.9.1
+
 # Forms
 email-validator==1.1.1
 Flask-WTF==0.14.3
