@@ -8,8 +8,6 @@
   <!--<![endif]-->
   <head>
     <meta charset="utf-8" />
-
-    <link rel="shortcut icon" href="{{static_url_for('static', filename='build/img/favicon.ico') }}">
     <title>
       {% block page_title %}
       Astrix
@@ -115,8 +113,21 @@
       });
     </script>
 
-    <!-- JavaScript at the bottom for fast page loading -->
-    <script src="{{ url_for('static', filename='build/main_js.bundle.js') }}"></script>
+    <!-- JS Global Compulsory -->
+    <script src="{{ url_for('static', filename='vendor/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/jquery-migrate/dist/jquery-migrate.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- JS Implementing Plugins -->
+    <script src="{{ url_for('static', filename='vendor/hs-header/dist/hs-header.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/hs-go-to/dist/hs-go-to.min.js') }}"></script>
+    <!--<script src="../assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>-->
+    <script src="{{ url_for('static', filename='vendor/jquery-validation/dist/jquery.validate.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/aos/dist/aos.js') }}"></script>
+
+    <!-- JS Astrix -->
+    <script src="{{ url_for('static', filename='js/hs.core.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/hs.validation.js') }}"></script>
     {% block js %}{% endblock %}
     <!-- end scripts -->
     {% endblock %}

@@ -3,7 +3,7 @@ import json
 from flask import Blueprint, current_app, request
 import requests
 from twilio.twiml.messaging_response import MessagingResponse
-from .util import detect_intent_texts
+from .util import detect_intent_texts, detect_intent_knowledge
 from app.extensions import csrf_protect
 
 blueprint = Blueprint('bot', __name__, url_prefix='/bot')
@@ -19,7 +19,7 @@ def twilio():
     resp = MessagingResponse()
     msg = resp.message()
     responded = False
-    intent = detect_intent_texts(project_id="astrix",
+    intent = detect_intent_knowledge(project_id="astrix",
                                  session_id="123",
                                  texts=[incoming_msg],
                                  language_code="en-US")

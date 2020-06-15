@@ -41,25 +41,25 @@
             <ul class="navbar-nav">
               <!-- Home -->
               <li class="navbar-nav-item">
-                <a id="home" class="nav-link" href="index.html" aria-expanded="false">Home</a>
+                <a id="home" class="nav-link" href="{{ url_for('public.home') }}" aria-expanded="false">Home</a>
               </li>
               <!-- End Home -->
-              <!-- Features -->
+              {#<!-- Features -->
               <li class="navbar-nav-item">
                 <a id="home" class="nav-link" href="features.html" aria-expanded="false">Features</a>
               </li>
-              <!-- End Features -->
+              <!-- End Features -->#}
               <!-- Contact -->
               <li class="navbar-nav-item">
-                <a id="home" class="nav-link" href="contact.html" aria-expanded="false">Contact</a>
+                <a id="home" class="nav-link" href="{{ url_for('public.contact') }}" aria-expanded="false">Contact</a>
               </li>
               <!-- End Contact -->
 
               <!-- Button -->
               <li class="navbar-nav-last-item">
-                <a class="btn btn-sm btn-primary transition-3d-hover" href="https://themes.getbootstrap.com/product/Astrix-multipurpose-responsive-template/" target="_blank">
-                  Request a demo
-                </a>
+                {% with class="btn btn-sm btn-primary transition-3d-hover" %}
+                {% include 'public/widgets/calendly.html' %}
+                {% endwith %}
               </li>
               <!-- End Button -->
             </ul>

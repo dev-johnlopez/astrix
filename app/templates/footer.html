@@ -1,7 +1,7 @@
 <!-- ========== FOOTER ========== -->
 <footer class="bg-navy">
   <div class="container space-2">
-    <div class="row mb-9">
+    <div class="row justify-content-center mb-2">
       <div class="col-lg-3 mb-5 mb-lg-0">
         <!-- Logo -->
         <a href="#" aria-label="Astrix">
@@ -10,11 +10,11 @@
         <!-- End Logo -->
       </div>
 
-      <div class="col-6 col-md-3 col-lg-2 mb-5 mb-lg-0">
+      {#<div class="col-6 col-md-3 col-lg-2 mb-5 mb-lg-0">
         <h5 class="text-white font-weight-bold">Help and advice</h5>
         <!-- Nav Links -->
         <ul class="nav nav-sm nav-x-0 nav-white flex-column">
-          <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('public.contact') }}">Contact us</a></li>
           <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Legal & Privacy</a></li>
         </ul>
@@ -56,16 +56,16 @@
         <!-- End Form -->
 
         <p class="text-white-70 small mb-0">Marketing tips &amp; tricks. Never spam.</p>
-      </div>
+      </div>#}
     </div>
 
     <!-- Copyright -->
-    <div class="row align-items-md-center">
-      <div class="col-md-6 mb-4 mb-md-0">
+    <div class="row justify-content-center">
+      {#<div class="col-md-6 mb-4 mb-md-0">#}
         <p class="small text-white-70 mb-0">© Astrix 2020. All rights reserved.</p>
-      </div>
+      {#</div>#}
 
-      <div class="col-md-6 text-md-right">
+      {#<div class="col-md-6 text-md-right">
         <!-- Social Networks -->
         <!--<ul class="list-inline mb-0">
           <li class="list-inline-item mb-2 mb-sm-0">
@@ -95,7 +95,7 @@
           </li>
         </ul>-->
         <!-- End Social Networks -->
-      </div>
+      </div>#}
     </div>
     <!-- End Copyright -->
   </div>

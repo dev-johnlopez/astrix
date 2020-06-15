@@ -1,0 +1,68 @@
+<!-- Icon Blocks Section -->
+<div class="container space-2">
+  <!-- Title -->
+  <div class="w-lg-65 text-center mx-auto mb-5 mb-sm-9">
+    <h2 class="h1">Effeciently scale your business</h2>
+    <p>Chatbots overcome the typical challenges managing a purely human workforce making chatbots your "perfect employee."</p>
+  </div>
+  <!-- End Title -->
+
+  <div class="row">
+    <div class="col-md-4 mb-7">
+      <!-- Icon Blocks -->
+      <div class="text-center px-lg-3">
+        <figure class="max-w-8rem mx-auto mb-4">
+          <img class="img-fluid" src="{{ url_for('static', filename='svg/icons/icon-16.svg') }}" alt="SVG">
+        </figure>
+        <h3>Available 24/7</h3>
+        <p>Wouldn't it be great if you could have an employee who is available at all hours of the day? Your chatbot will be available for instantaneous responses to any of your customers needs at any time of day.</p>
+      </div>
+      <!-- End Icon Blocks -->
+    </div>
+
+    <div class="col-md-4 mb-7">
+      <!-- Icon Blocks -->
+      <div class="text-center px-lg-3">
+        <figure class="max-w-8rem mx-auto mb-4">
+          <img class="img-fluid" src="{{ url_for('static', filename='svg/icons/icon-23.svg') }}" alt="SVG">
+        </figure>
+        <h3>Scalable to any workload</h3>
+        <p>Add rocket fuel to your business. No longer will you be constrained to a limited number of converstaions with your customers. Your chatbot can handle 1000's of conversations simultaneously!</p>
+      </div>
+      <!-- End Icon Blocks -->
+    </div>
+
+    <div class="col-md-4 mb-7">
+      <!-- Icon Blocks -->
+      <div class="text-center px-lg-3">
+        <figure class="max-w-8rem mx-auto mb-4">
+          <img class="img-fluid" src="{{ url_for('static', filename='svg/icons/icon-31.svg') }}" alt="SVG">
+        </figure>
+        <h3>Saves you money</h3>
+        <p>Chatbots are much cheaper than their human-like counterparts. You don't have to pay your chatbot paid time off, benefits, insurance etc. Also, you chatbot wont become injured on the job either!</p>
+      </div>
+      <!-- End Icon Blocks -->
+    </div>
+  </div>
+</div>
+<!-- End Icon Blocks Section -->
+
+<!-- CTA Section -->
+<div class="bg-primary">
+  <div class="container space-2">
+    <div class="row justify-content-lg-between align-items-lg-center text-center text-lg-left">
+      <div class="col-lg-5 mb-5 mb-lg-0">
+        <h2 class="text-white mb-0">Find out how you can get this "perfect employee"</h2>
+      </div>
+
+      <div class="col-lg-5 text-lg-right">
+        {% with class="btn btn-indigo btn-wide btn-pill transition-3d-hover mx-1 mb-2" %}
+        {% include 'public/widgets/calendly.html' %}
+        {% endwith %}
+        {#<a class="btn btn-indigo btn-wide btn-pill transition-3d-hover mx-1 mb-2" href="#">Get Started</a>
+        <a class="btn btn-light btn-wide btn-pill transition-3d-hover mx-1 mb-2" href="#">Learn More</a>#}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End CTA Section -->
