@@ -33,6 +33,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='vendor/hs-mega-menu/dist/hs-mega-menu.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='vendor/aos/dist/aos.css') }}">
 
+    <!-- CSS Chat Template -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+
     <!-- CSS Astrix Template -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
 
@@ -45,6 +48,7 @@
 
     <main role="main">
       {% block content %}{% endblock %}
+      {% include 'public/widgets/chat.html' %}
     </main>
 
     {% include "footer.html" %}
@@ -93,6 +97,76 @@
         $('.js-go-to').each(function () {
           var goTo = new HSGoTo($(this)).init();
         });
+      });
+    </script>
+
+    <script>
+      $(function() {
+        var INDEX = 0;
+        $("#chat-submit").click(function(e) {
+          e.preventDefault();
+          var msg = $("#chat-input").val();
+          if(msg.trim() == ''){
+            return false;
+          }
+          generate_message(msg, 'self');
+          send_message(msg);
+        })
+
+        function generate_message(msg, type) {
+          INDEX++;
+          var str="";
+          str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg "+type+"\">";
+          str += "          <div class=\"cm-msg-text\">";
+          str += msg;
+          str += "          <\/div>";
+          str += "        <\/div>";
+          $(".chat-logs").append(str);
+          $("#cm-msg-"+INDEX).hide().fadeIn(100);
+          if(type == 'self'){
+           $("#chat-input").val('');
+          }
+          $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);
+        }
+
+        function send_message(msg) {
+          $.ajax({
+            type: "POST",
+            url: "{{ url_for('bot.web') }}",
+            data: { msg: msg}
+          }).done(function( data ) {
+            generate_message(data, 'user');
+          });
+        }
+
+        function getJSessionId(){
+          var jsId = document.cookie.match(/JSESSIONID=[^;]+/);
+          if(jsId != null) {
+              if (jsId instanceof Array)
+                  jsId = jsId[0].substring(11);
+              else
+                  jsId = jsId.substring(11);
+          }
+          return jsId;
+      }
+
+        $(document).delegate(".chat-btn", "click", function() {
+          var value = $(this).attr("chat-value");
+          var name = $(this).html();
+          $("#chat-input").attr("disabled", false);
+          generate_message(name, 'self');
+        })
+
+        $("#chat-circle").click(function() {
+          $("#chat-circle").toggle('scale');
+          $(".chat-box").toggle('scale');
+        })
+
+        $(".chat-box-toggle").click(function() {
+          $("#chat-circle").toggle('scale');
+          $(".chat-box").toggle('scale');
+        })
+
       });
     </script>
 

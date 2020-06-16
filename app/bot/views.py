@@ -27,6 +27,17 @@ def twilio():
     responded = True
     return str(resp)
 
+@blueprint.route('/web', methods=['POST'])
+@csrf_protect.exempt
+def web():
+    incoming_msg = request.values.get('msg')
+    print(incoming_msg)
+    intent = detect_intent_texts(project_id="astrix",
+                                 session_id="123",
+                                 texts=[incoming_msg],
+                                 language_code="en-US")
+    return intent.query_result.fulfillment_text
+
 @blueprint.route('/twilio_old', methods=['POST'])
 @csrf_protect.exempt
 def twilio_old():
