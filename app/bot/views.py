@@ -62,3 +62,10 @@ def twilio_old():
     if not responded:
         msg.body('I only know about famous quotes and cats, sorry!')
     return str(resp)
+
+@blueprint.route('/new_lead', methods=['POST'])
+@csrf_protect.exempt
+def new_lead():
+    incoming_msg = request.values.get('Body', '').lower()
+    print(request)
+    return
